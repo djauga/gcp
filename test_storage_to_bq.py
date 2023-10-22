@@ -50,7 +50,7 @@ def rename_dict_key(the_dict, old_key_name, new_key_name):
 
 json_records = []
 key_list = ["generated_at","invocation_id", 'results']
-json_files = [file for file in storage_client.bucket(gcs_bucket_name).list_blobs(prefix="test/adjusted_minor_platform_spends_test_2023_09_28_21_57_23") if file.name.endswith(".json")]
+json_files = [file for file in storage_client.bucket(gcs_bucket_name).list_blobs(prefix="test/") if file.name.endswith(".json")]
 
 for json_blob in json_files:
     
